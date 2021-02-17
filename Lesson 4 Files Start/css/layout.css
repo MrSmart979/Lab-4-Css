@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+/* http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+/* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/* STEP 5: Base typography */
+body {
+	font-family: serif,sans-serif;
+	font-size: 140%;
+	
+}
+
+/* STEP 6: Outline all elements to be arranged in layout */
+div#container {
+	outline: 1px solid red;
+	
+/* STEP 7: Set the width and the margins of the page container */
+	width: 500px;
+	margin: 0 auto;
+	padding: 10px;
+	background: red;
+}
+
+/* STEP 10: Layer positioned elements with z-index */
+header {
+	outline: 1px solid blue;
+	background: lightcyan;
+	position: fixed;
+	z-index: 1;
+	text-align: center;
+	right: 0;
+	left: 0;
+	padding: -100px;
+}
+
+main {
+	outline: 5px dotted cyan;
+	/* STEP 8e: Set a float to clear a float */
+	background: lightgreen;
+	float: right; 
+	margin-top: 200px;
+	
+
+}
+
+
+		
+
+
+@media screen and (min-width: 480px) {
+section {
+	outline: 5px solid coral;
+	/* STEP 8a: Set the width of the <section> and the <aside> columns */
+	width: 920px;
+	/* STEP 8b: Float the 2 columns right and left */
+	float: right; position: absolute;
+	/* STEP 8c: Break the float, and experiment with border-box sizing at top of CSS file */
+	/* display: inline-block; */
+	/* STEP 8f: Experiment with inline-block to arrange the 2 columns inside the <main> */
+	text-align: right;
+	
+
+}
+section{
+	height: 45rem;
+
+}
+aside {
+	outline: 5px dotted green;
+	/* STEP 8g: vertically align the <aside> column */
+	background: yellow;
+	width: 250px;
+	/* float: left; */
+	vertical-align: top ;
+	display: inline-block; 
+	z-index: 2;
+	float: left; position: relative;
+}
+}
+footer {
+	outline: 4px solid palevioletred;
+	background: black, transparent;
+	/* STEP 8d: Clear the footer, noticing that the <main> element is collapsed */
+	clear: both;
+	position: fixed;
+}
+/* STEP 11: Control visibility and display properties */
+main p:hover img {
+	visibility: hidden;
+}
+/* STEP 9: Absolute and fixed positioning */
+p.social {
+	font-family: socialicoregular;
+	font-size: 4rem;
+	color: yellowgreen;
+	background: rgba(255, 255, 255, .7);
+	width: 200px;
+	height: 100px;
+	text-align: center;
+	position: absolute;
+	z-index: 9;
+	padding: 30px;
+	right: 0;
+	bottom: 0;
+}
